@@ -1,4 +1,4 @@
-name: liniting-wf
+name: linting-wf
 on:
   push:
     branches:
@@ -10,15 +10,15 @@ jobs:
   linting-job:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout Repository
+      - name: Checkout Repository
         uses: actions/checkout@v4
       - name: Install HTMLHint
-        run: npm install --save-dev htmlhint 
+        run: npm install --save-dev htmlhint
       - name: Install stylelint 
-        run: npm install --sase-dev stylelint 
-      - name: Lint Htnl Files
-        run: npx htmlhint "*/.html"
-      - name: Lint css Files
-        run: npx stylelint "*/.css"
-      - name: Display Package.json Contents
+        run: npm install --save-dev stylelint   # Fixed the typo here
+      - name: Lint HTML Files
+        run: npx htmlhint "**/*.html"   # Corrected the pattern to match HTML files properly
+      - name: Lint CSS Files
+        run: npx stylelint "**/*.css"   # Corrected the pattern to match CSS files properly
+      - name: Display package.json Contents
         run: cat package.json
