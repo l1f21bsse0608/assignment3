@@ -5,7 +5,6 @@
           "declaration-block-no-duplicate-properties": true,
           "no-duplicate-selectors": true,
           "value-keyword-case": "lower",
-          "property-case": "lower", 
           "block-no-empty": true
        }
 
